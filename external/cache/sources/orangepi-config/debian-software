@@ -1444,7 +1444,7 @@ install_packet "pure-ftpd-common pure-ftpd-mysql quota quotatool" "pureFTPd and 
 sed -i 's/VIRTUALCHROOT=false/VIRTUALCHROOT=true/' /etc/default/pure-ftpd-common
 echo 1 > /etc/pure-ftpd/conf/TLS
 mkdir -p /etc/ssl/private/
-openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -subj "/C=GB/ST=GB/L=GB/O=GB/OU=GB/CN=$(hostname -f)/emailAddress=joe@joe.com" -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem >/dev/null 2>&1
+openssl req -x509 -nodes -days 7300 -newkey rsa:2048 -subj "/C=GB/ST=GB/L=GB/O=GB/OU=GB/ES=$(hostname -f)/emailAddress=joe@joe.com" -keyout /etc/ssl/private/pure-ftpd.pem -out /etc/ssl/private/pure-ftpd.pem >/dev/null 2>&1
 chmod 600 /etc/ssl/private/pure-ftpd.pem
 /etc/init.d/pure-ftpd-mysql restart >/dev/null 2>&1
 local temp=$(cat /etc/fstab | grep "/ " | tail -1 | awk '{print $4}')

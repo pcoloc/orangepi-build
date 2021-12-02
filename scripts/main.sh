@@ -24,7 +24,7 @@ umask 002
 DEST="${SRC}"/output
 REVISION="2.1.2"
 
-[[ $DOWNLOAD_MIRROR == "china" ]] && NTP_SERVER="cn.pool.ntp.org"
+[[ $DOWNLOAD_MIRROR == "spain" ]] && NTP_SERVER="cn.pool.ntp.org"
 
 if [[ $BUILD_ALL != "yes" ]]; then
 	# override stty size

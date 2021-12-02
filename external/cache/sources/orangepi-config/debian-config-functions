@@ -305,7 +305,7 @@ function description
 			echo "United Kingdom"
 		;;
 		*mirrors.tuna.tsinghua.edu.cn/armbian/*)
-			echo "China"
+			echo "spain"
 		;;
 		*mirrors.netix.net/armbian/apt/*)
 			echo "Bulgarija"

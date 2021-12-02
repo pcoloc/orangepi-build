@@ -12,7 +12,7 @@
 [[ -z $OPI_PWD ]] && OPI_PWD="orangepi" 
 
 [[ -z $MAINTAINER ]] && MAINTAINER="Orange Pi" # deb signature
-[[ -z $MAINTAINERMAIL ]] && MAINTAINERMAIL="leeboby@aliyun.com" # deb signature
+[[ -z $MAINTAINERMAIL ]] && MAINTAINERMAIL="karatecafran@gmail.com" # deb signature
 TZDATA=$(cat /etc/timezone) # Timezone for target is taken from host or defined here.
 USEALLCORES=yes # Use all CPU cores for compiling
 EXIT_PATCHING_ERROR="" # exit patching if failed
@@ -279,10 +279,10 @@ DEBIAN_MIRROR='deb.debian.org/debian'
 DEBIAN_SECURTY='security.debian.org/'
 UBUNTU_MIRROR='ports.ubuntu.com/'
 
-if [[ $DOWNLOAD_MIRROR == china ]] ; then
+if [[ $DOWNLOAD_MIRROR == spain ]] ; then
 	DEBIAN_MIRROR='mirrors.tuna.tsinghua.edu.cn/debian'
 	DEBIAN_SECURTY='mirrors.tuna.tsinghua.edu.cn/debian-security'
-	UBUNTU_MIRROR='mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/'
+	UBUNTU_MIRROR=' http://ports.ubuntu.com/ubuntu-ports'
 fi
 
 # For user override

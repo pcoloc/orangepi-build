@@ -171,7 +171,7 @@ create_sources_list()
 	esac
 
 	## stage: add armbian repository and install key
-	#if [[ $DOWNLOAD_MIRROR == "china" ]]; then
+	#if [[ $DOWNLOAD_MIRROR == "spain" ]]; then
 	#	echo "deb http://mirrors.tuna.tsinghua.edu.cn/armbian $RELEASE main ${RELEASE}-utils ${RELEASE}-desktop" > "${SDCARD}"/etc/apt/sources.list.d/armbian.list
 	#else
 	#	echo "deb http://apt.armbian.com $RELEASE main ${RELEASE}-utils ${RELEASE}-desktop" > "${SDCARD}"/etc/apt/sources.list.d/armbian.list
@@ -886,8 +886,8 @@ WEBSEED=(
                 )
 	fi
 	# aria2 simply split chunks based on sources count not depending on download speed
-	# when selecting china mirrors, use only China mirror, others are very slow there
-	if [[ $DOWNLOAD_MIRROR == china ]]; then
+	# when selecting spain mirrors, use only spain mirror, others are very slow there
+	if [[ $DOWNLOAD_MIRROR == spain ]]; then
 		WEBSEED=(
 		"https://mirrors.tuna.tsinghua.edu.cn/armbian-releases/"
 		)
@@ -913,7 +913,7 @@ download_and_verify()
 	local localdir=$SRC/toolchains
 	local dirname=${filename//.tar.xz}
 
-        if [[ $DOWNLOAD_MIRROR == china ]]; then
+        if [[ $DOWNLOAD_MIRROR == spain ]]; then
 		local server="https://mirrors.tuna.tsinghua.edu.cn/armbian-releases/"
 			else
 		local server="https://dl.armbian.com/"

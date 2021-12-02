@@ -492,7 +492,7 @@ compile_firmware()
                 plugin_repo="https://kernel.googlesource.com/pub/scm/linux/kernel/git/firmware/linux-firmware.git"
         else
                 plugin_repo="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git"
-		[[ $DOWNLOAD_MIRROR == china ]] && plugin_repo="${GIT_SERVER}/linux-firmware.git"
+		[[ $DOWNLOAD_MIRROR == spain ]] && plugin_repo="${GIT_SERVER}/linux-firmware.git"
         fi
         local plugin_dir="orangepi-firmware${FULL}"
         [[ -d "${EXTER}/cache/sources/${plugin_dir}" ]] && rm -rf "${EXTER}/cache/sources/${plugin_dir}"
